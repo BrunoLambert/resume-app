@@ -1,0 +1,21 @@
+@keyframes KnightPushing {
+    0% {
+        background-image: url('../sprites/Push/push1.png');
+    }
+
+    25% {
+        background-image: url('../sprites/Push/push2.png');
+    }
+
+    25% {
+        background-image: url('../sprites/Push/push3.png');
+    }
+
+    75% {
+        background-image: url('../sprites/Push/push4.png');
+    }
+
+    100% {
+        background-image: url('../sprites/Push/push2.png');
+    }
+}

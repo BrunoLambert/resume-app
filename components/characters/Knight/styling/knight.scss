@@ -1,0 +1,35 @@
+@use "./walking.css";
+@use "./idle.css";
+@use "./attack.css";
+@use "./running.css";
+@use "./pushing.css";
+
+#knight {
+    background-image: url("../sprites/knight.png");
+
+    &.display:hover {
+        animation-name: KnightWalking;
+    }
+
+    &.idle {
+        animation-duration: 3s !important;
+        animation-name: KnightIdle;
+    }
+
+    &.walking {
+        animation-name: KnightWalking;
+    }
+
+    &.running {
+        animation-name: KnightRunning;
+    }
+
+    &.attacking {
+        animation-duration: 0.3s;
+        animation-name: KnightAttack;
+    }
+    &.pushing {
+        animation-name: KnightPushing;
+        background-position: 40% 100%;
+    }
+}

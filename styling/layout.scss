@@ -1,0 +1,55 @@
+.layout-header {
+  & .header-brand {
+    position: relative;
+    height: 100px;
+    width: 75px;
+
+    & .header-brand-content {
+      transition: all 1s;
+      transition-timing-function: linear;
+      position: absolute;
+      left: -100px;
+
+      &.on {
+        left: 0;
+      }
+    }
+  }
+}
+
+:root {
+  --intro-window-end: calc(100vw + 75px);
+}
+
+.loading-transition-duration {
+  transition: all 1.5s;
+  transition-timing-function: linear;
+}
+
+.loading-transition {
+  z-index: 50 !important;
+  left: var(--intro-window-end);
+
+  &.on {
+    left: 0 !important;
+  }
+
+  & .character-loading-transition {
+    left: -105px;
+
+    &.off {
+      left: calc(var(--intro-window-end) - 75px);
+    }
+
+    & #mage,
+    & #knight,
+    & #rogue {
+      width: 200px !important;
+      height: 200px !important;
+    }
+
+    & #knight.pushing {
+      background-position: 60% 100% !important;
+    }
+  }
+}

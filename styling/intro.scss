@@ -1,0 +1,29 @@
+:root {
+  --intro-window-end: calc(100vw + 75px);
+}
+
+.intro-duration {
+  transition: all 1.5s;
+  transition-timing-function: linear;
+}
+
+.intro-transition {
+  left: 0;
+
+  &.off {
+    left: var(--intro-window-end);
+  }
+}
+
+.character-transition {
+  left: -125px;
+
+  &.off {
+    left: calc(var(--intro-window-end) - 110px);
+  }
+
+  & #mage, #knight, #rogue {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}

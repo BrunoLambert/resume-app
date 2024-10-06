@@ -1,0 +1,34 @@
+@use './walking.css';
+@use './idle.css';
+@use './attack.css';
+@use './running.css';
+@use './pushing.css';
+
+#mage {
+    background-image: url('../sprites/mage.png');
+
+    &.display:hover {
+        animation-name: MageWalking;
+    }
+
+    &.idle {
+        animation-name: MageIdle;
+        animation-delay: 0 !important;
+    }
+
+    &.walking {
+        animation-name: MageWalking;
+    }
+
+    &.running {
+        animation-name: MageRunning;
+    }
+
+    &.attacking {
+        animation-name: MageAttack;
+    }
+
+    &.pushing {
+        animation-name: MagePushing;
+    }
+}
