@@ -3,9 +3,7 @@ import { MainContext } from '@/types/MainContext';
 import { Button, Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
 import * as React from 'react';
 
-interface JobCardProps { }
-
-const JobCard: React.FunctionComponent<JobCardProps> = () => {
+const JobCard: React.FunctionComponent = () => {
   const { animatedRedirect } = React.useContext(MainContext);
 
   return (<Card className='mt-5 normal-text'>

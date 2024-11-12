@@ -9,7 +9,6 @@ class ApiClient {
   }
 
   async getExperiences(): Promise<ExperienceResponseType> {
-    console.log(this.apiUrl)
     const response = await fetch(`${this.apiUrl}/experiences`);
     return response.json();
   }

@@ -1,22 +1,23 @@
 import { formatSimpleDate } from '@/helpers/date';
 import { ExperienceDataType } from '@/server/experience.data';
+import { CharacterClass } from '@/types/Character';
 import { MainContext } from '@/types/MainContext';
-import { Accordion, AccordionItem, Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
+import { Accordion, AccordionItem, Button, Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
 import * as React from 'react';
 
-interface ExperiencesPageProps { }
-
-const ExperiencesPage: React.FunctionComponent<ExperiencesPageProps> = () => {
-  const { finishRedirect, redirectData, appApi } = React.useContext(MainContext);
+const ExperiencesPage: React.FunctionComponent = () => {
+  const { finishRedirect, redirectData, appApi, animatedRedirect } = React.useContext(MainContext);
   const [myExperiences, setMyExperiences] = React.useState<ExperienceDataType[]>([])
 
   const getExperiences = React.useCallback(async () => {
     const { data } = await appApi.getExperiences();
     setMyExperiences(data);
 
-    if (!redirectData) return;
-    finishRedirect();
-  }, [redirectData, finishRedirect])
+    if (redirectData?.page !== "experiencias") return;
+    setTimeout(() => {
+      finishRedirect();
+    }, 1000);
+  }, [redirectData, finishRedirect, appApi])
 
   const formatExperienceDescription = (description: string, experienceIndex: number) => {
     let tmp = description.split("%e");
@@ -36,7 +37,13 @@ const ExperiencesPage: React.FunctionComponent<ExperiencesPageProps> = () => {
   }, [getExperiences])
 
   return (
-    <div>
+    <div className='pb-8'>
+      <Button
+        variant='bordered' className='fixed z-40 rounded-full bg-secondary' style={{ bottom: 10, right: 10, height: 80, width: 80 }}
+        onClick={() => animatedRedirect('/', CharacterClass.KNIGHT)}
+      >
+        Voltar
+      </Button>
       {myExperiences.map((experience, index) => (
         <Card key={`${index}-experience:${experience.role}`} className='normal-text mb-4'>
           <CardHeader className='block text-center lg:text-start my-2 text-xl'>

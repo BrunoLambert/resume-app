@@ -78,6 +78,90 @@ const GET_EXPERIENCE_DATA = (): ExperienceDataType[] => [
       "Troubleshooting",
       "Unit Testing"
     ],
+  },
+  {
+    role: 'Desenvolvedor Frontend',
+    companyName: 'Beeleads',
+    companyLogo: "/beeleads_logo.jpeg",
+    remote: false,
+    workTime: "Full-Time",
+    startDate: "08-01-2019",
+    endDate: "01-20-2020",
+    description: `%eDesenvolvimento de aplicativos frontend usando React, Next, Material UI, React Native e Kitten UI.
+      %eMigraçãocom sucesso o sistema para Next e React, melhorando o desempenho e a experiência do usuário.
+      %eColaboração com designers para implementar novos designs de UI para interação aprimorada do usuário.
+      %eCriação de um novo aplicativo móvel do zero usando React Native para uma experiência de usuário perfeita.`,
+    skills: [
+      "Software Development",
+      "Front-end Development",
+      "React Native",
+      "Jest",
+      "Server Side JavaScript",
+      "Problem Solving",
+      "React.js",
+      "Node.js",
+      "Linux",
+      "Debugging",
+      "Internet Software",
+      "Next.js",
+      "Front-End Development",
+      "Troubleshooting"
+    ],
+  },
+  {
+    role: 'Estagiário',
+    companyName: 'Incluir Tecnologia',
+    companyLogo: "/incluir_tecnologia_logo.jpeg",
+    remote: false,
+    workTime: "Full-Time",
+    startDate: "12-01-2018",
+    endDate: "08-20-2019",
+    description: `%eDesenvolvimento de aplicações web usando VueJS, NuxtJS, PHP, Laravel, MySQL e VueBoostrap para UI.
+      %eCriação de sistemas para impressão 3D, aulas de linguagem de sinais e serviços bancários.
+      %eContribuição para o desenvolvimento do sistema MOVA.`,
+    skills: [
+      "Vue.js",
+      "Software Development",
+      "Front-end Development",
+      "Information Technology Infrastructure",
+      "E-Commerce",
+      "Computer Information Systems",
+      "Tailwind CSS",
+      "Problem Solving",
+      "Node.js",
+      "Linux",
+      "Debugging",
+      "Banking",
+      "Infrastructure Technologies",
+      "Troubleshooting",
+      "Unit Testing"
+    ],
+  },
+  {
+    role: 'Estagiário',
+    companyName: 'Tuuris.com',
+    companyLogo: "/tuuris_logo.jpeg",
+    remote: false,
+    workTime: "Full-Time",
+    startDate: "11-01-2017",
+    endDate: "10-01-2018",
+    description: `%eDesenvolvimento de aplicativos web usando JavaScript (Node.JS - Vue/Nuxt - Vuetify), Ruby (Rails) e MySQL para Tuuris.com.
+      %eColaboração com equipes para aprimorar o site da Tuuris, conectando viajantes com agências de viagens.
+      %eImplementação de soluções inovadoras para melhorar a experiência do usuário e agilizar processos.
+      %eContribuição para o crescimento e sucesso de uma startup na indústria de viagens.`,
+    skills: [
+      "Vue.js",
+      "Software Development",
+      "Test Execution",
+      "Front-end Development",
+      "Jest",
+      "Problem Solving",
+      "Node.js",
+      "Linux",
+      "Debugging",
+      "Troubleshooting",
+      "Unit Testing"
+    ],
   }
 ]
 

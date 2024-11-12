@@ -3,7 +3,7 @@ import { CharacterStateType } from "@/types/Character";
 export const generateCharacterClass = (state: CharacterStateType, onlyDisplay?: boolean) => {
     if (onlyDisplay) return 'display';
 
-    let charClass = [state.direction]
+    const charClass = [state.direction]
 
     if (state.attack) {
         charClass.push('attacking')

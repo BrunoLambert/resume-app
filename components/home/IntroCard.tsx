@@ -2,9 +2,7 @@ import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
 import Image from 'next/image';
 import * as React from 'react';
 
-interface IntroCardProps { }
-
-const IntroCard: React.FunctionComponent<IntroCardProps> = () => {
+const IntroCard: React.FunctionComponent = () => {
   return (<Card>
     <CardHeader className='flex justify-center flex-col gap-3'>
       <div className='pt-3'>

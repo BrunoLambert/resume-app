@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+
 import { useState, type ReactElement, type ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
@@ -20,6 +22,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
     return (
         <MainProvider>
+            <title>Quem é Bruno Lambert?</title>
             <NextUIProvider>
                 <main className='dark text-foreground bg-background'>
                     {showingIntro && <AppIntro introIsFinish={() => setShowingIntro(false)} />}
