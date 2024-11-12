@@ -8,6 +8,7 @@ import { NextUIProvider } from "@nextui-org/system";
 import "@/styling/globals.css";
 import AppIntro from '@/components/intro';
 import MainProvider from '@/providers/MainProvider';
+import Head from 'next/head';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     getLayout?: (page: ReactElement) => ReactNode
@@ -22,7 +23,14 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
     return (
         <MainProvider>
-            <title>Quem é Bruno Lambert?</title>
+            <Head>
+                <title>Quem é Bruno Lambert?</title>
+                <link rel="icon" href="/icon.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <meta name="description" content="Bem vindo! Começa mais sobre mim vendo todo o meu caminho para me tornar o melhor especialista frontend." />
+                <meta property="og:image" content="/profile.jpg" />
+            </Head>
             <NextUIProvider>
                 <main className='dark text-foreground bg-background'>
                     {showingIntro && <AppIntro introIsFinish={() => setShowingIntro(false)} />}
